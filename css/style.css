@@ -1,0 +1,633 @@
+@charset "utf-8";
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "talon", "fot-tsukuardgothic-std", sans-serif;
+  font-weight: 40px;
+  font-style: normal;
+  margin: 0;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1 {
+  font-weight: normal;
+  margin: 0;
+}
+
+h2 {
+  margin: 0;
+  font-size: 40px;
+  padding: 70px 0;
+  text-align: center;
+  font-weight: normal;
+}
+
+h3 {
+  margin: 0;
+  font-size: 18px;
+  line-height: 24px;
+  text-align: center;
+}
+
+h4 {
+  margin: 0;
+  font-weight: normal;
+}
+
+h5 {
+  margin: 0;
+  text-align: center;
+  font-size: 20px;
+  padding: 20px 0;
+}
+
+h6 {
+  margin: 0;
+  font-size: 28px;
+  color: #212121;
+}
+
+button {
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+p {
+  margin: 0;
+  font-size: 26px;
+}
+
+img {
+  width: 100%;
+  vertical-align: bottom;
+}
+
+.container .container-3 {
+  width: calc(100% - 60px);
+  margin: 0 auto;
+}
+
+.container-2 {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.container-4 {
+  max-width: 800px;
+}
+
+/* header */
+
+header nav.large {
+  display: block;
+  background: url(../img/OHME-DOOR.png) center/cover #ffffff;
+}
+
+header nav.small {
+  display: none;
+}
+
+header nav.large ul {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  align-items: center;
+  padding: 16px 60px;
+}
+
+header nav img {
+  width: 180px;
+}
+
+header nav a {
+  font-size: 32px;
+  transition: font-size .3s, color .3s;
+}
+
+header nav a:hover {
+  font-size: 38px;
+  color: #d3905f;
+}
+
+header .hero {
+  margin-bottom: 900px;
+}
+
+header .heros img {
+  height: 900px;
+  object-fit: cover;
+  position: absolute;
+  opacity: 0;
+  transition: opacity 1.5s;
+}
+
+header .heros img.current {
+  opacity: 1;
+}
+
+header .hero .container {
+  padding-left: 60px;
+}
+
+header .hero h1 {
+  font-size: 170px;
+  line-height: 140px;
+  color: white;
+  position: absolute;
+  top: 380px;
+  /* background: red; */
+}
+
+header .hero span {
+  color: #BC9579;
+}
+
+/* news */
+
+#news {
+  background: #BC9579;
+  padding-bottom: 60px;
+  position: relative;
+}
+
+#news img.door {
+  width: 200px;
+}
+
+#news img.door-l {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#news img.door-r {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+#news h2 {
+  text-align: center;
+}
+
+#news ul {
+  display: flex;
+  justify-content: space-between;
+  height: 260px;
+}
+
+#news ul.newses li {
+  width: calc((100% - 60px) / 3);
+  padding-bottom: 60px;
+  transition: width .3s;
+}
+
+#news ul.newses li:hover {
+  width: calc((100% - 30px) / 3);
+}
+
+#news h3 {
+  padding: 10px 0;
+  font-family: "fot-tsukuardgothic-std";
+}
+
+#news p {
+  text-align: center;
+  padding: 10px 0;
+}
+
+#news a {
+  transition: width .3s;
+}
+
+#news .modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  margin: auto;
+  padding: 0 40px 40px 40px;
+  background: rgba(239, 194, 161, 0.9);
+  height: calc(100% - 80px);
+  width: calc(100% - 80px);
+  max-width: 800px;
+  overflow: scroll;
+  text-align: center;
+  box-sizing: border-box;
+  font-family: "fot-tsukuardgothic-std";
+  display: none;
+  animation: show 0.3s linear 0s;
+}
+
+#news .modal.hidden {
+  display: block;
+}
+
+#news .modal h6 {
+  padding-top: 30px;
+  padding-bottom: 20px;
+}
+
+#news .modal p {
+  font-size: 20px;
+}
+
+#news .modal div {
+  height: 25px;
+  width: 25px;
+  margin-left: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  position: relative;
+  right: -30px;
+}
+
+#news .modal button i {
+  font-size: 24px;
+}
+
+/* calendar */
+
+#calendar {
+  padding-bottom: 160px;
+}
+
+#calendar .container {
+  border-top: 1px solid rgb(66, 66, 66);
+  border-bottom: 1px solid rgb(66, 66, 66);
+  padding: 30px 0;
+}
+
+#calendar .cale div {
+  font-family: "fot-tsukuardgothic-std";
+  width: calc((100% - 30px) / 2);
+}
+
+#calendar table {
+  width: 100%;
+}
+
+#calendar table .red {
+  color: #af3c36;
+}
+
+#calendar table .holi {
+  background: #deae9b;
+}
+
+#calendar table th {
+  padding: 30px 0;
+}
+
+#calendar .cale {
+  display: flex;
+  justify-content: space-between;
+}
+
+#calendar p {
+  text-align: center;
+  padding-bottom: 16px;
+}
+
+#calendar p span {
+  color: #deae9b;
+}
+
+/* contact */
+
+#contact {
+  background: #BC9579;
+  padding-bottom: 140px;
+  position: relative;
+}
+
+#contact img.door {
+  width: 200px;
+}
+
+#contact img.door-l {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#contact img.door-r {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+#contact iframe {
+  width: 100%;
+  filter: grayscale(100%);
+}
+
+#contact p {
+  font-family: "fot-tsukuardgothic-std";
+  text-align: center;
+  font-size: 20px;
+  padding: 10px 0;
+}
+
+/* footer */
+
+footer {
+  background: rgb(66, 66, 66);
+  padding: 40px 0;
+}
+
+footer h4 {
+  text-align: center;
+  font-size: 20px;
+  color: #e9e9e9;
+}
+
+footer .f-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  margin: auto;
+  padding: 0 40px 40px 40px;
+  background: rgba(238, 238, 238, 0.9);
+  height: calc(100% - 80px);
+  width: calc(100% - 80px);
+  max-width: 800px;
+  overflow: scroll;
+  text-align: center;
+  box-sizing: border-box;
+  font-family: "fot-tsukuardgothic-std";
+  display: none;
+  animation: show 0.3s linear 0s;
+}
+
+footer .f-modal.hidden {
+  display: block;
+}
+
+footer .f-modal.hidden {
+  display: block;
+}
+
+footer .f-modal h6 {
+  padding-top: 30px;
+  padding-bottom: 20px;
+}
+
+footer .f-modal p span {
+  color: #af3c36;
+}
+
+footer .f-modal p {
+  color: #212121;
+  border: none;
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  text-align: left;
+  margin-top: 40px;
+}
+
+footer .f-modal div {
+  height: 25px;
+  width: 25px;
+  margin-left: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  position: relative;
+  right: -30px;
+}
+
+footer .f-modal button i {
+  font-size: 24px;
+  color: #212121;
+}
+
+footer i {
+  display: block;
+  text-align: center;
+  font-size: 50px;
+  color: #e9e9e9;
+  transition: font-size .3s;
+}
+
+footer i:hover {
+  font-size: 54px;
+}
+
+footer a {
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}
+
+footer p {
+  text-align: center;
+  font-size: 16px;
+  color:#f39048;
+  border: 1px solid #f39048;
+  border-radius: 10px;
+  padding: 0 10px;
+  margin-bottom: 10px;
+  margin-top: 4px;
+  transition: color .3s, background-color .3s;
+}
+
+footer p.ff:hover {
+  color: rgb(66, 66, 66);
+  background-color: #f39048;
+}
+
+@keyframes show{
+  from{
+      opacity: 0;
+  }
+  to{
+      opacity: 1;
+  }
+}
+
+@media (max-width: 800px) {
+
+  .container-3 {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .container {
+    width: calc(100% - 60px);
+    margin: 0 auto;
+  }
+
+/* header */
+
+  header nav.large {
+    display: none;
+  }
+  
+  header nav.small {
+    display: block;
+  }
+
+  header nav img {
+    width: 120px;
+  }
+
+  header nav ul {
+    padding: 10px 0px;
+  }
+
+  header nav.small ul.menu-head {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    align-items: center;
+  }
+
+  header nav a {
+    font-size: 26px;
+    transition: color .3s;
+  }
+
+  header nav a:hover {
+    font-size: 26px;
+  }
+
+  header .hero h1 {
+    top: 360px;
+    /* background: red; */
+  }
+
+  header .hero .container {
+    padding-left: 0px;
+  }
+
+  header .menu-head {
+    z-index: 5;
+    position: relative;
+    background: #ffffff;
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  header .menu-tab {
+    background: rgba(255, 255, 255, .5);
+    position: absolute;
+    top: 64px;
+    left: 0;
+    width: 100%;
+  }
+
+  header .menu-tab div {
+    z-index: 4;
+  }
+
+  header .menu-tab div {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px 0;
+  }
+
+  header .menu-tab a {
+    font-size: 32px;
+  }
+
+  header .menu-tab a:hover {
+    font-size: 32px;
+    color: #d3905f;
+  }
+
+  header .heros {
+    position: relative;
+    z-index: 0;
+  }
+
+  header #menu {
+    position: absolute;
+    top: -36px;
+    /* top: 30px; */
+    z-index: 4;
+    transition: top .3s;
+  }
+
+  header #menu.hidden {
+    position: absolute;
+    top: 64px;
+  }
+
+  header .menu-head i {
+    display: flex;
+    transition: transform .3s;
+  }
+
+  header .menu-head i.span {
+    transform: rotate(180deg);
+  }
+
+  /* news */
+
+  #news {
+    background: #BC9579;
+    padding-bottom: 90px;
+  }
+
+  #news ul {
+    display: block;
+    height: auto;
+  }
+
+  #news .newses {
+    z-index: 0;
+  }
+
+  #news ul.newses li {
+    width: 90%;
+    padding-bottom: 60px;
+    margin: 0 auto;
+    transition: opacity .3s;
+  }
+  
+  #news ul.newses li:hover {
+    width: 90%;
+    opacity: .7;
+  }
+
+/* calendar */
+
+  #calendar .cale {
+    display: block;
+  }
+
+  #calendar .cale div {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+}
