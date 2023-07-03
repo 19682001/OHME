@@ -211,6 +211,8 @@ header .hero span {
 #news h3 {
   padding: 10px 0;
   font-family: "fot-tsukuardgothic-std";
+  color: #212121;
+  -webkit-appearance: none;
 }
 
 #news p {
@@ -268,6 +270,8 @@ header .hero span {
 
 #news .modal button i {
   font-size: 24px;
+  color: #212121;
+  -webkit-appearance: none;
 }
 
 /* calendar */
